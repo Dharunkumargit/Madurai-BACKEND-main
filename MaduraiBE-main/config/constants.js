@@ -3,7 +3,7 @@ export const KWIC_URL = "https://app.kwic.in/api/v1/push";
 
 export const ROLE_CONTACTS = {
   // Fill-Level Based
-  "Sanitary Inspector": ["91"],           // 🔥 For 75-90%
+  "Sanitary Inspector": ["919342571277"],           // 🔥 For 75-90%
   "Ward Supervisor": ["91"],              // 🔥 For 75-90%
   "Sanitary Officer": ["91"],             // 🔥 For 100%
   

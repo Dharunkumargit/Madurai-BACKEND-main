@@ -2,7 +2,9 @@ import axios from "axios";
 import { KWIC_API_KEY, KWIC_URL } from "../config/constants.js";
 
 export const sendWhatsAppAlert = async ({
-  imageUrl,
+  imagename,
+  latitude,
+  longitude,
   mobile,
   location,
   ward,
@@ -28,13 +30,15 @@ export const sendWhatsAppAlert = async ({
       `${KWIC_URL}?api_key=${KWIC_API_KEY}`,
       {
         mobile_number: cleanMobile,
-        template_id: "bin_alert",
+        template_id: "bin_alert_2",
         // header_image_url: imageUrl,
         variable: {
           location_name: location || "Unknown",
           ward_number: ward || "N/A",
           zone_number: zone || "N/A",
           fill_percentage: fill || "100",
+          imagename: imagename || "No Image",
+          latlon: latitude && longitude ? `${latitude},${longitude}` : "N/A",
         },
       },
       {

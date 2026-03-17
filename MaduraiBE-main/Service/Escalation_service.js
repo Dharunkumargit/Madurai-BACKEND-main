@@ -54,6 +54,9 @@ class EscalationService {
               ward: bin.ward,
               zone: bin.zone,
               fill: bin.filled,
+              imagename: bin.history?.[0]?.image_url,
+              latitude: bin.latitude,
+              longitude: bin.longitude,
             });
           }
 
@@ -119,6 +122,9 @@ class EscalationService {
         ward: bin.ward?.toString() || "0",
         zone: bin.zone?.toString() || "0",
         fill: bin.filled?.toString(),
+        imagename: bin.history?.[0]?.image_url,  // Latest image if available
+        latitude: bin.latitude,
+        longitude: bin.longitude,
       });
 
       console.log(`✅ WhatsApp Success → ${cleanPhone}`, result);
